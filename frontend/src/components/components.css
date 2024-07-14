@@ -1,0 +1,433 @@
+@font-face {
+  font-family: "Lufga";
+  src: url("../fonts/LufgaMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Lufga", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 120px;
+  /* background-color: #000000; */
+}
+
+.navlinks {
+  display: flex;
+  width: 85vw;
+  height: 60px;
+  border-radius: 50px;
+  /* justify-content: space-around; */
+  background-color: rgb(0, 0, 0);
+}
+
+ul.links {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5px;
+}
+
+li {
+  flex-shrink: 2;
+  height: 50px;
+  width: 11.02vw;
+  /* background-color: blueviolet; */
+  font-size: 2vw;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+}
+
+.red {
+  background-color: #fd853a;
+  border-radius: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.headerlogo{
+  width: auto;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.logo{
+  height: 60px;
+  width: 157px;
+  background-image: url('../assets/logo/logo3.svg');
+  display: none;
+  position: relative;
+
+}
+
+.crosicon{
+  display: none;
+}
+
+/* ....................................navbar-media....................... */
+@media( max-width:750px){
+
+.logo{
+  display: block;
+}
+.headerlogo{
+  display: none;
+  width: auto;
+  display: block;
+  display: flex;
+}
+
+.navlinks{
+  display: none;
+  height: 500px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  border-radius: 0px 10px 10px 0px;
+  top: 200px;
+  right: 30%;
+  border-radius: 0px 15px 15px 0px;
+  display: none;
+}
+.links{
+  display: flex;
+  height: auto;
+  width: 50px;
+  flex-direction: column;
+}
+li {
+  flex-shrink: 2;
+  height: 80px;
+  width: 70px;
+  font-size: 30px;
+  font-weight: 300;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+.crosicon{
+  display: block;
+  transform: rotate(45deg);
+  width: 10%;
+  height: auto;
+  position: absolute;
+ left: 85%;
+ display: none;
+}
+.navicon{
+  width: 7%;
+  position: absolute;
+  right: 2%;
+}
+.red{
+  background-color: #000000;
+}
+}
+
+/* .............................container...................... */
+
+.container {
+  display: flex;
+  height: 408px;
+  width: 356px;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color: #68686845;
+}
+.container::after {
+  content: "";
+  position: relative;
+  /* background-color: #FD853A; */
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 306px;
+}
+
+.container-p {
+  position: relative;
+  color: white;
+  font-size: 25px;
+  font-family: "Lufga", sans-serif;
+  width: 356px;
+  height: 30px;
+  background-color: #fd853a;
+  left: 20px;
+  top: 30px;
+}
+
+.line {
+  position: relative;
+  height: 2px;
+  width: 356px;
+  background-color: #000000;
+  top: 100px;
+}
+
+/* .portfoliosectionheading{
+  height: 100px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 700;
+  font-family: 'Lufga', sans-serif;
+  color: white;
+}
+
+.p2p4{
+  font-size: 40px;
+  font-weight: 700;
+  color: #FD853A;
+}
+.portfoliocard-title{
+  height: 50px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: 'Lufga', sans-serif;
+} */
+
+.portfoliocard {
+  height: 400px;
+  width: 600px;
+  display: flex;
+  background-color: #68686845;
+  border-radius: 40px;
+  flex-direction: column;
+  position: relative;
+  left: 20px;
+}
+
+.portfoliocardNavicon {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #fd853a;
+  position: relative;
+  left: 500px;
+  top: 100px;
+  z-index: 1;
+  display: none;
+}
+
+.portfoliocardtext1 {
+  font-size: 60px;
+  font-family: "Lufga", sans-serif;
+  font-weight: 800;
+  color: white;
+  position: relative;
+  top: -100px;
+  left: 20px;
+}
+
+.portfoliocardtext2 {
+  height: 150px;
+  width: 96%;
+  background-color: #0b2a5b85;
+  position: relative;
+  top: -160px;
+  left: 12px;
+  border-radius: 20px;
+  text-align: top;
+  display: none;
+}
+
+.portfoliocardtext2p1 {
+  font-size: 60px;
+  font-family: "Lufga", sans-serif;
+  font-weight: 800;
+  color: white;
+  position: relative;
+  left: 20px;
+}
+
+.portfoliocardtext2p2 {
+  width: 560px;
+  position: relative;
+  left: 20px;
+  color: white;
+}
+
+.portfoliocard:hover .portfoliocardtext1 {
+  display: none;
+}
+.portfoliocard:hover .portfoliocardtext2 {
+  display: block;
+}
+.portfoliocard:hover .portfoliocardNavicon {
+  display: block;
+  z-index: 3;
+}
+
+/* .............................footer...................... */
+
+.footer {
+  height: 550px;
+  width: 100vw;
+  border-radius: 30px 45px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  background-color: #272727;
+}
+
+.footerpart1 {
+  height: 150px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.thinline {
+  height: 2px;
+  width: 80vw;
+  position: relative;
+  left: 10%;
+  background-color: #475467;
+}
+
+.footertitle {
+  display: inline-block;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  left: 60px;
+}
+
+.hireme {
+  display: inline-block;
+  height: 50px;
+  width: 150px;
+  background-color: #fd853a;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  outline: none;
+  border: none;
+  left: 550px;
+  cursor: pointer;
+}
+
+.footerpart2 {
+  height: 300px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+
+  /* background-color: rgb(187, 16, 104); */
+}
+
+.logo-social-icon {
+  height: 300px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.footertext {
+  font-size: 15px;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  left: 20px;
+}
+
+.social-icons {
+  height: 25px;
+  width: 160px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  left: 20px;
+  cursor: pointer;
+}
+
+.footerlinks {
+  height: 150px;
+  width: 60px;
+}
+.footernavigation {
+  height: 25px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+}
+.quicknav {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Lufga", sans-serif;
+  color: #fd853a;
+  position: relative;
+  cursor: pointer;
+  display: inline-flex;
+}
+.footerlink {
+  font-size: 15px;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  left: 20px;
+  cursor: pointer;
+  display: inline-flex;
+}
+
+.footercontact {
+  height: 150px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+  left: 80px;
+  color: white;
+}
+
+.footercontact-title {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Lufga", sans-serif;
+  color: #fd853a;
+  position: relative;
+}
+
+.footerpart3 {
+  height: 100px;
+  width: 100vw;
+}
+
+.footerpart3text {
+  width: 100vw;
+  font-size: 15px;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  left: 40vw;
+  top: 60px;
+}

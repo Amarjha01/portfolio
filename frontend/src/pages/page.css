@@ -1,0 +1,883 @@
+@font-face {
+  font-family: "Lufga";
+  src: url("../fonts/LufgaMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.name {
+  color: #fd853a;
+}
+.p0 {
+ font-size: 2rem;
+}
+.hello {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p0p0{
+  height: 50px;
+  width: 100px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+@media(max-width:700px){
+  .hello {
+    position: relative;
+    top: -70px;
+  }
+}
+.herosection {
+  height: 779px;
+  width: 100%;
+}
+.introo {
+  height: 23.4375vw;
+}
+.p1 {
+  text-align: center;
+  font-size: 7.8125vw;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.p2 {
+  position: relative;
+  top: -4.6875vw;
+}
+
+.p3 {
+  height: 3.9%;
+  width: 23%;
+  font-size: clamp(20px, 1vw, 20px);
+  font-weight: 200;
+  font-family: "Nunito Sans", sans-serif;
+  color: #000000;
+  position: relative;
+  top: 35px;
+  left: 40px;
+}
+
+
+.circle {
+  height: 78.125vw;
+  width: 78.125vw;
+  border-radius: 500px;
+  background-color: #fd853a;
+  position: relative;
+  left: 10.9375vw;
+  top: -3.125vw;
+}
+.heroimg{
+  width: 100%;
+  height: 63%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -149px;
+  left: 180px;
+}
+.hero-img{
+  height: 99.52%;
+  width: 100%;
+}
+.calltoaction {
+  color: white;
+  height: 100%;
+  width: 350px;
+  font-size: 10px;
+  background-color: #000000;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.txt{
+font-size: 2.5em;
+}
+
+
+.box {
+  height: 74px;
+  width: 355px;
+  font-size: 200px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 490px;
+  top: 260px;
+}
+
+.l1:hover {
+  height: 60px;
+  width: 200px;
+  background-color: #fd853a;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.l2:hover {
+  height: 60px;
+  width: 200px;
+  background-color: #fd853a;
+  text-align: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+li:hover {
+  font-size: 25px;
+}
+
+@media(max-width:450px){
+  .herosection{
+    position: relative;
+    top: -60px;
+  }
+.hello{
+  position: relative;
+  bottom: 10px;
+}
+  .p3{
+    /* width: 15%;
+    height: 100px;
+    font-size: 60%;
+    color: white;
+    background-color: #000000;
+    position: relative;
+    left: 0px;
+    top: -1px; */
+    display: none;
+  }
+ 
+
+  .circle{
+    position: relative;
+    top: -1%;
+  }
+  .heroimg{
+   display: none;
+  }
+
+ 
+}
+
+
+
+
+
+
+.frame {
+  height: 680px;
+  width: 100vw;
+  background-image: url("../assets/Frame58.png");
+  object-fit: fill;
+  position: relative;
+  border-radius: 40px 70px 70px 40px;
+  z-index: 10;
+}
+
+.p4 {
+  width: 400px;
+  color: white;
+  font-size: 60px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+.p4p2 {
+  color: #fd853a;
+}
+
+.p5 {
+  height: 50px;
+  width: 500px;
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Nunito Sans", sans-serif;
+  position: relative;
+  top: -30px;
+  left: 700px;
+}
+
+.cards {
+  height: 415px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  /* background-color: #000000; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 15px;
+}
+.card {
+  cursor: pointer;
+  margin: 20px;
+  /* background-color: #e6e6e6; */
+}
+
+.card01 {
+  height: 415px;
+  width: 340px;
+  cursor: pointer;
+  position: relative;
+  top: 60px;
+  /* background-color: #e6e6e6; */
+}
+.card02 {
+  height: 415px;
+  width: 340px;
+  cursor: pointer;
+  position: relative;
+  top: 60px;
+  /* background-color: #e6e6e6; */
+}
+.card03 {
+  height: 415px;
+  width: 340px;
+  cursor: pointer;
+  position: relative;
+  top: 60px;
+  /* background-color: #e6e6e6; */
+}
+
+.arrow {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  left: 245px;
+  top: -45px;
+}
+
+.arrowcircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: #1d2939;
+}
+
+.card:hover .arrowcircle {
+  background-color: #fd853a;
+}
+
+.experiences {
+  width: 100vw;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+.p6 {
+  width: 100vw;
+  height: 100px;
+  color: #374151;
+  font-size: 40px;
+  font-family: "Lufga", sans-serif;
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle2 {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 3px dashed #1d2939;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle2-1 {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #fd853a;
+}
+
+.experience {
+  height: 300px;
+  width: 100vw;
+  /* background-color: #df0000; */
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  position: relative;
+  top: 30px;
+}
+
+.devider {
+  height: 300px;
+  width: 40px;
+  /* background-color: #1D2939; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashed-line {
+  width: 2px;
+  height: 70px;
+  border-right: 2px dashed black;
+}
+
+.companiesName {
+  height: 300px;
+  width: 500px;
+  font-size: 30px;
+  color: #374151;
+  font-family: "Lufga", sans-serif;
+  font-weight: 900;
+  /* background-color: #1D2939; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  left: 40px;
+}
+
+.fieldsName {
+  height: 300px;
+  width: 500px;
+  font-size: 35px;
+  color: #374151;
+  font-family: "Lufga", sans-serif;
+  font-weight: 900;
+  /* background-color: #1D2939; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  position: relative;
+  right: 40px;
+}
+
+.hire-me {
+  height: 700px;
+  width: 100%;
+  background-color: #f2f4f7;
+  border-radius: 60px 50px 50px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hire-me-content {
+  width: 80%;
+  height: 600px;
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  background-color: rgba(127, 255, 212, 0.273);
+}
+
+.hire-me-img {
+  height: 550px;
+  width: 550px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  left: -60px;
+  object-fit: cover;
+  /* background-color: #1D2939; */
+  background-image: url("../assets/hiremeimg1.svg");
+}
+
+.p7 {
+  height: 100px;
+  width: 500px;
+  font-size: 60px;
+  color: #374151;
+  font-family: "Lufga", sans-serif;
+  font-weight: 900;
+  position: relative;
+  left: -20px;
+}
+
+.hire-me-text {
+  height: 200px;
+  width: 400px;
+  font-size: 30px;
+  color: #374151;
+  font-family: "Lufga", sans-serif;
+  position: relative;
+  left: -20px;
+}
+
+.hire-me-btn {
+  height: 90px;
+  width: 180px;
+  border: 1.5px solid #000000;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Lufga", sans-serif;
+  position: relative;
+  left: -20px;
+}
+
+.portfolio {
+  height: 700px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #1D2939; */
+}
+
+.portfolioHeading {
+  height: 200px;
+  width: 100vw;
+  font-size: 60px;
+  padding: 80px 0px 0px 80px;
+  color: #374151;
+  font-family: "Lufga", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.see-all {
+  height: 70px;
+  width: 150px;
+  font-size: 30px;
+  color: white;
+  background-color: #fd853a;
+  font-family: "Lufga", sans-serif;
+  font-weight: 500;
+  position: relative;
+  left: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.p8p2 {
+  position: relative;
+  left: -435px;
+  top: 40px;
+}
+
+.portfoliococard {
+  background-image: url("../assets/portfoliocardimg1.svg");
+  height: 400px;
+  width: 600px;
+  position: relative;
+  left: -10px;
+  cursor: pointer;
+}
+.portfoliocards {
+  height: 400px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* position: relative;
+  top: 30px; */
+}
+.portfolionavIcon {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: #fd853a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 460px;
+  top: 30px;
+  display: none;
+}
+
+.arrowicon {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.portfoliotext1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  top: 300px;
+  left: 30px;
+}
+
+.portfoliotext2 {
+  font-family: "Lufga", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* align-items: center; */
+  color: white;
+  height: 150px;
+  width: 94%;
+  background-color: #0b2a5b85;
+  position: relative;
+  top: 145px;
+  left: 3%;
+  border-radius: 20px;
+  display: none;
+}
+
+.portfoliotext2p2 {
+  font-size: 15px;
+  font-weight: 400;
+  position: relative;
+  left: 3%;
+}
+
+.portfoliotext2p1 {
+  font-size: 50px;
+  font-weight: 100;
+  font-family: "Lufga", sans-serif;
+  color: white;
+  position: relative;
+  left: 3%;
+}
+
+.portfoliococard:hover .portfoliotext1 {
+  display: none;
+}
+
+.portfoliococard:hover .portfoliotext2 {
+  display: block;
+}
+.portfoliococard:hover .portfolionavIcon {
+  display: block;
+}
+
+/* .........................................testimonil............................. */
+.testimonials {
+  height: 700px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 60px 80px 80px 60px;
+  background-color: #f2f4f7;
+  background-image: url("../assets/Frame.svg");
+}
+
+.testimonialheading {
+  height: 200px;
+  width: 100vw;
+  font-size: 45px;
+  font-family: "Lufga", sans-serif;
+  font-weight: 400;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 100px;
+}
+
+.testimonialp1 {
+  height: 200px;
+  width: 530px;
+  text-align: center;
+}
+
+.testimonialp1p2 {
+  color: #fd853a;
+}
+
+.testimonialp1p3 {
+  font-size: 15px;
+}
+
+.testimonialcard {
+  height: 250px;
+  width: 700px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 100px;
+  left: 25%;
+}
+
+.clintprofileimage {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #fd853a;
+  position: relative;
+  left: 10px;
+}
+
+.stars {
+  display: inline-block;
+  height: 50px;
+  width: 180px;
+  position: relative;
+  gap: 4px;
+  display: flex;
+  position: relative;
+  left: -230px;
+  top: 10px;
+}
+.star {
+  height: 32px;
+  width: 32px;
+  position: relative;
+  top: 10px;
+  background-image: url("../assets/Star.svg");
+}
+
+.quotation-mark {
+  display: inline-block;
+  height: 128px;
+  width: 100px;
+  position: relative;
+  top: -50px;
+  left: 250px;
+  z-index: 12;
+  background-image: url("../assets/quote-down.svg");
+}
+
+.clintprofilng {
+  display: inline-block;
+  height: 90px;
+  width: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 20px;
+  left: -230px;
+}
+
+.clintname {
+  position: relative;
+  left: 20px;
+  color: white;
+}
+
+.clintnamep1 {
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.testimonial-text {
+  display: inline-block;
+  height: 200px;
+  width: 650px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Nunito Sans", sans-serif;
+  color: white;
+  position: relative;
+}
+
+.mail {
+  height: 400px;
+  width: 100vw;
+}
+
+.rollingboard {
+  height: 150px;
+  width: 100vw;
+  background-color: #fb6514;
+}
+
+/* .......................aboutme............................. */
+
+.aboutme{
+  height:100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #000000;
+  border-radius: 30px;
+
+}
+
+.title{
+  font-size: 25px;
+  font-weight: 700;
+  color: #fd853a;
+  position: relative;
+  left: 20px;
+}
+
+.aboutme-text{
+  height: fit-content;
+  font-size: 15px;
+  font-weight: 500;
+  width: 90vw;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 15px;
+  left: 20px;
+
+}
+.Professional-experience{
+  position: relative;
+  top: -30px;
+}
+
+.project{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  gap : 1%;
+  background-color: #000000;
+}
+
+.projectsection{
+  height: 80%;
+  width: 45%;
+  /* background-color: #fb6514; */
+  position: relative;
+  left: 5%;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img1{
+  height: 64.1%;
+  width: 100%;
+  background-image: url(../assets/project-1.svg);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-img2{
+  height: 64.1%;
+  width: 100%;
+  background-image: url(../assets/project-2.svg);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shade{
+  height: 100%;
+  width: 100%;
+  background-color: #00000081;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  position: relative;
+  gap: 10px;
+  color: #bdbdbd;
+}
+
+.project-title{
+  color: #fd853a;
+  font-size: 40px;
+  font-weight: 600;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 5%;
+}
+
+.downloadIcon{
+  color: white;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-img1:hover  .shade{
+display: block;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project-img2:hover  .shade{
+display: block;
+display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-brief{
+  position: relative;
+  top: 50px;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
