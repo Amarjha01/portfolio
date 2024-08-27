@@ -6,14 +6,16 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
-     <Header />
+    <div className="appcolor container mx-auto h-auto overflow-hidden">
+     <Header/>
+          <main>
           <Outlet />
+          </main>
 
       <Footer />
        
       
-    </>
+    </div>
   );
 }
 

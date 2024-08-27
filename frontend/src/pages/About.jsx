@@ -1,7 +1,7 @@
 import React from "react";
 const About = () => {
   return (
-    <>
+    <div className="">
       <div className="aboutme">
         <div className="about-me">
           <span className="aboutmetitle title">About Me</span>
@@ -54,7 +54,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

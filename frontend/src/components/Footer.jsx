@@ -12,18 +12,21 @@ import linkedin from "../assets/social-icon/linkedin.svg";
 
 const Footer = () => {
   return (
-    <>
-      <div className="footer">
-        <div className="footerpart1">
-          <span className="footertitle">Lets Connect There</span>
-          <button className="hireme"> Hire me</button>
-          <span className="arrow"></span>
+    <div className="container">
+      <div className="footer md:rounded-t-3xl">
+        <div className="footerpart1 justify-between ">
+          <span className="footertitle text-3xl md:text-5xl md:font-bold left-3 md:left-14">Lets Connect There</span>
+          <button className="hireme right-4 md:right-24"> Hire me</button>
+          {/* <span className="arrow"></span> */}
         </div>
-        <div className="thinline"></div>
-        <div className="footerpart2">
+        <div className="flex justify-center">
+        <div className=" w-5/6 h-[2px] bg-slate-500"></div>
+        </div>
+
+        <div className="footerpart2 h-80 flex items-center md:gap-32">
           <div className="logo-social-icon">
             <span className="logo-footer">{<img src={logo1} alt="logo" />}</span>
-            <span className="footertext">
+            <span className="footertext md:left-14">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
               laborum laboriosam, facilis repellat voluptas reprehenderit
               debitis magnam odio saepe laudantium.
@@ -67,19 +70,22 @@ const Footer = () => {
             <Link to='/Projects'><span className="footerlink">Projects</span></Link>
             <Link to='/Contact'><span className="footerlink">Contact</span></Link>
             </div>
-            <div className="footercontact">
+            <div className="footercontact right-2 md:items-center ">
               <p className="footercontactinfo"><span className="footercontact-title" >Contact</span></p>
               <p className="footercontactinfo">+91 9199569397</p>
-              <p className="footercontactinfo">contact@amarjha.tech</p>
               <p className="footercontactinfo">amarjha.tech</p>
+              <span className="footercontactinfo">Email</span>
             </div>
         </div>
-        <div className="thinline"></div>
-        <div className="footerpart3">
-          <span className="footerpart3text">Coppyright ©️ 2024 Amar. All rights reserved.</span>
+        <div className="flex justify-center">
+        <div className=" w-5/6 h-[2px] bg-slate-500"></div>
+        </div>
+        <div className=" h-28 w-full flex flex-col  items-center">
+          <span className="footerpart3text top-14 ">Made with 🖤 by Amar</span>
+          <span className="footerpart3text top-14">Coppyright ©️ 2024 Amar. All rights reserved.</span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

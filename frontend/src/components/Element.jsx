@@ -3,8 +3,8 @@ import './components.css'
 const Element = ({containertext , containerimg}) => {
   return (
     <>
-    <div className="container">
-        <p className='container-p'>{containertext}</p>
+    <div className="containerr">
+        <p className='containerr-p'>{containertext}</p>
         <div className='line'></div>
         <div className='small'></div>
         <div className='medium'></div>

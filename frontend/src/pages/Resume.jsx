@@ -20,9 +20,9 @@ const Resume = () => {
   };
 
   return (
-    <>
+    <div className=''>
       <button onClick={downloadResume}>Download</button>
-    </>
+    </div>
   );
 };
 
