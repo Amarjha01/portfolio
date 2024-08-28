@@ -1,23 +1,37 @@
-import React from "react";
+import { useState,useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import './components.css';
 import logo from '../assets/logo/logo3.svg';
 import crossicon from '../assets/NavIcon/crossIcon.svg'
 import navicon from '../assets/NavIcon/navIcon.svg'
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
+
+
+const showMenu = ()=>{
+  const navbar = document.querySelector('.navbar');
+  // navbar.className = 'left-0%'
+}
+
+  useEffect(() => {
+showMenu()
+  },[isActive])
+  
   return(
     
-   <div className="container mx-auto px-2 ">
+   <div className="container mx-auto px-2  ">
      <header>
-    <div className="headerlogo container  block md:hidden">
+    <div className="headerlogo  container flex  lg:hidden">
     <div className="w-full flex justify-center ">
       <img src={logo} alt="" />
     </div>
-      {/* <img src={navicon} alt="" className="navicon" />
-      {<img src={crossicon} alt="" className="crosicon" />} */}
+     <div className=" ">
+     <img src={navicon} alt="" className="navicon w-8 relative " onClick={()=>{setIsActive(true)}} />
+     {<img src={crossicon} alt="" className="crosicon" />}
+     </div>
     </div>
-      <div  className="navbar h-[120px] pt-4 hidden md:block">
-        <div className="navlinks container max-w-7xl h-16">
+      <div  className=" navbar lg:h-[120px] lg:pt-4 lg:flex lg:justify-center  lg:items-center  ">
+        <div className="navlinks lg:bg-black lg:flex lg:rounded-[50px] lg:container lg:max-w-7xl lg:h-16  ">
           <ul className="links w-full px-[5px] py-[15px] max-w-7xl">
           <NavLink to="/" className={(e)=>{return e.isActive?"red" : ""}  } exact><li className="w-36 text-2xl">Home</li></NavLink>
           <NavLink to="/About" className={(e)=>{return e.isActive?"red" : ""}} exact><li className="w-36 text-2xl"  >About</li></NavLink>

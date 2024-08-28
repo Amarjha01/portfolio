@@ -8,7 +8,7 @@ app.use(cors());
 // app.use(express.static(path.join(__dirname, '..' , 'public')));
 
 app.get('/api', (req, res) => {
-	res.download('./resume.pdf');
+	res.download('./amarjhaResume.pdf');
 });
 
 
