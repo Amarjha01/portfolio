@@ -6,6 +6,7 @@ const Card = () => {
 
 <div className='div'>
 <div className="div2"></div>
+<div className="div2"></div>
 </div>
     
 </>
