@@ -3,7 +3,7 @@ name: Frontend CI/CD
 on:
   push:
     branches:
-      - frontend # Trigger on push to the frontend branch
+      - main # Trigger on push to the frontend branch
     paths:
       - 'frontend/**' # Only trigger when changes are made in the frontend directory
   pull_request:
