@@ -1,0 +1,41 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches:
+      - frontend # Trigger on push to the frontend branch
+    paths:
+      - 'frontend/**' # Only trigger when changes are made in the frontend directory
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'frontend/**' # Only trigger when changes are made in the frontend directory
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20.11.1' # Ensure this version exists and is correct
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: ./frontend # Specify your frontend directory
+
+    - name: Build the project
+      run: npm run build
+      working-directory: ./frontend # Specify your frontend directory
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./frontend/build # Path to the build directory
+        cname: amarjha.tech # Replace with your custom domain
