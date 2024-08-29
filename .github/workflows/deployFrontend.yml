@@ -3,14 +3,10 @@ name: Frontend CI/CD
 on:
   push:
     branches:
-      - main # Trigger on push to the frontend branch
-    paths:
-      - 'frontend/**' # Only trigger when changes are made in the frontend directory
+      - main # Trigger on push to the main branch
   pull_request:
     branches:
       - main
-    paths:
-      - 'frontend/**' # Only trigger when changes are made in the frontend directory
 
 jobs:
   build:
@@ -23,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20.11.1' # Ensure this version exists and is correct
+        node-version: '18' # Specify the Node.js version
 
     - name: Install dependencies
       run: npm install
@@ -38,4 +34,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./frontend/build # Path to the build directory
-        cname: amarjha.tech # Replace with your custom domain
+        cname: your-custom-domain.com # Replace with your custom domain
