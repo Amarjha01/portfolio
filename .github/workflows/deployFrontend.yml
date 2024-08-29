@@ -33,5 +33,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }} # Use the default GitHub token
-        publish_dir: ./frontend/build # Path to the build directory
+        publish_dir: ./frontend/dist # Path to the build directory
         cname: amarjha.tech # Replace with your custom domain
