@@ -38,8 +38,8 @@ jobs:
     - name: Print working directory
       run: pwd
 
-    - name: List files in frontend/dist
-      run: ls -la 
+    - name: List files 
+      run: ls -la portfolio
       working-directory: ./frontend
 
     - name: Print working directory
