@@ -21,7 +21,7 @@ const Resume = () => {
 
   return (
     <div className=''>
-      <button onClick={downloadResume}>Download</button>
+      <button onClick={downloadResume}>Download my resume</button>
     </div>
   );
 };
