@@ -30,7 +30,7 @@ jobs:
       working-directory: ./frontend # Specify your frontend directory
 
     - name: List files in frontend/dist
-      run: ls -la ./frontend
+      run: ls -la 
       working-directory: ./frontend
     
     
