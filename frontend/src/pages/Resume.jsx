@@ -1,27 +1,32 @@
-import Axios from 'axios';
-import FileDownload from 'js-file-download';
+import { useState } from 'react';
 import React from 'react';
+import commonApiEndpoints from '../../common/backendEndpoints';
 
 const Resume = () => {
-  const downloadResume = (e) => {
-    e.preventDefault();
-    Axios({
-      url: 'http://192.168.249.148:5000/api', // Replace with your local IP address
-      method: 'GET',
-      responseType: 'blob'
-    })
-      .then((response) => {
-        console.log(response);
-        FileDownload(response.data, 'resume.pdf');
-      })
-      .catch((error) => {
-        console.error("There was an error downloading the resume!", error);
-      });
+
+  const [resume, setResume] = useState('');
+
+  const fetchResume = async () => {
+    try {
+      const response = await fetch(commonApiEndpoints.resume.url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'resume.pdf'; // Change this to the file name you want
+      link.click();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error fetching the resume:', error);
+    }
   };
 
   return (
-    <div className=''>
-      <button onClick={downloadResume}>Download my resume</button>
+    <div>
+      <button onClick={fetchResume}>Download my resume</button>
     </div>
   );
 };
