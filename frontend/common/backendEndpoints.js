@@ -1,4 +1,4 @@
-const backendDomain = 'http://157.245.102.116:8080';
+const backendDomain = 'https://api.amarjha.tech';
 
 const commonApiEndpoints = {
     resume:{
