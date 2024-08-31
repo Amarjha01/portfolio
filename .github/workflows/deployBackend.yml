@@ -1,4 +1,4 @@
-name: Deploy Backend to Docker Hub and Elastic Beanstalk
+name: Deploy Backend to Docker Hub and DigitalOcean
 
 on:
   push:
@@ -21,19 +21,31 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t portfolio-backend-app  -f Dockerfile .
+          docker build -t portfolio-backend-app -f Dockerfile .
 
       - name: Log in to Docker Hub
         env:
-            DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-            DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+          DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
         run: |
-             echo "$DOCKER_HUB_ACCESS_TOKEN" | docker login --username "$DOCKER_HUB_USERNAME" --password-stdin
+          echo "$DOCKER_HUB_ACCESS_TOKEN" | docker login --username "$DOCKER_HUB_USERNAME" --password-stdin
 
       - name: Tag Docker image
         run: |
-          docker tag portfolio-backend-app:latest amarjha01/portfoliopioneer
+          docker tag portfolio-backend-app:latest amarjha01/portfoliopioneer:latest
 
       - name: Push Docker image to Docker Hub
         run: |
-           docker push amarjha01/portfoliopioneer
+          docker push amarjha01/portfoliopioneer:latest
+
+      - name: Deploy to DigitalOcean Droplet
+        uses: appleboy/ssh-action@v0.1.1
+        with:
+          host: ${{ secrets.DIGITALOCEAN_IP }}
+          username: ${{ secrets.DIGITALOCEAN_SSH_USER }}
+          key: ${{ secrets.DIGITALOCEAN_SSH_KEY }}
+          script: |
+            docker pull amarjha01/portfoliopioneer:latest
+            docker stop portfolio-backend-container || true
+            docker rm portfolio-backend-container || true
+            docker run -d --name portfolio-backend-container -p 80:5000 amarjha01/portfoliopioneer:latest
