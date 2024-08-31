@@ -45,6 +45,7 @@ jobs:
           username: ${{ secrets.DIGITALOCEAN_SSH_USER }}
           key: ${{ secrets.DIGITALOCEAN_SSH_KEY }}
           script: |
+            set -x
             docker pull amarjha01/portfoliopioneer:latest
             docker stop portfolio-backend-container || true
             docker rm portfolio-backend-container || true
