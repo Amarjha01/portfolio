@@ -1,4 +1,4 @@
-const backendDomain = 'http://localhost:5000';
+const backendDomain = 'http://157.245.102.116:8080';
 
 const commonApiEndpoints = {
     resume:{
