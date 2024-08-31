@@ -10,6 +10,12 @@ app.use("/api", router);
 
 app.use(cors());
 
+app.use(cors({
+    origin: 'https://amarjha.tech' // Replace with your frontend domain
+}));
+
+
+
 // Your existing routes
 app.get('/api/endpoint', (req, res) => {
   res.json({ message: 'Hello from backend!' });
